@@ -13,7 +13,6 @@ export default function HomeScreen() {
       <ThemedButton
           id={"sesmtLists"}
           title={"Check Lists"}
-          width={400}
           height={80}
           bgColor={"#2E303F"}
           color={"white"}

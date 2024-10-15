@@ -22,7 +22,15 @@ export default function ListsScreen() {
             <ThemedButtonNoChildren
                 id={"extintores"}
                 title={"Extintores"}
-                width={400}
+                height={80}
+                bgColor={"#109370"}
+                color={"white"}
+                radius={10}
+                fontSize={28}
+                onPress={() => router.push("/checkLists/check_extintor")} />
+            <ThemedButtonNoChildren
+                id={"extintores"}
+                title={"Extintores Predial"}
                 height={80}
                 bgColor={"#109370"}
                 color={"white"}
@@ -32,7 +40,6 @@ export default function ListsScreen() {
             <ThemedButtonNoChildren
                 id={"hidrantes"}
                 title={"Hidrantes"}
-                width={400}
                 height={80}
                 bgColor={"#109370"}
                 color={"white"}
@@ -42,7 +49,6 @@ export default function ListsScreen() {
             <ThemedButtonNoChildren
                 id={"alarmes-incendio"}
                 title={"Alarmes de Incêndio"}
-                width={400}
                 height={80}
                 bgColor={"#109370"}
                 color={"white"}

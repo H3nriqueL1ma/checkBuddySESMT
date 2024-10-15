@@ -13,24 +13,31 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.h3nriquel1ma.checkbuddysesmt"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon-buddy.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.h3nriquel1ma.checkbuddysesmt"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/splash.png"
+      "favicon": "./assets/images/splash-buddy.png"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "242acabc-f0da-4963-a7e4-428b560cb32a"
+      }
     }
   }
 }

@@ -5,12 +5,12 @@ import {
     View
 } from "react-native";
 
-export function ThemedButton(props: { id: string, title: any, width: number, height: number, bgColor: string, color: string, radius: number, fontSize: number, children: any, onPress: any }) {
-    const { id, title, width, height, bgColor, color, radius, fontSize, children, onPress } = props;
+export function ThemedButton(props: { id: string, title: any, height: number, bgColor: string, color: string, radius: number, fontSize: number, children: any, onPress: any }) {
+    const { id, title, height, bgColor, color, radius, fontSize, children, onPress } = props;
 
     const styles = StyleSheet.create({
         button: {
-            width: width,
+            width: "100%",
             height: height,
             backgroundColor: bgColor,
             borderRadius: radius,
@@ -21,7 +21,7 @@ export function ThemedButton(props: { id: string, title: any, width: number, hei
             paddingLeft: 12,
         },
         underlay: {
-            width: width,
+            width: "100%",
             height: height,
             backgroundColor: bgColor,
             borderRadius: radius,
@@ -49,12 +49,12 @@ export function ThemedButton(props: { id: string, title: any, width: number, hei
     );
 }
 
-export function ThemedButtonNoChildren(props: { id: string, title: any, width: number, height: number, bgColor: string, color: string, radius: number, fontSize: number, onPress: any }) {
-    const { id, title, width, height, bgColor, color, radius, fontSize, onPress } = props;
+export function ThemedButtonNoChildren(props: { id: string, title: any, height: number, bgColor: string, color: string, radius: number, fontSize: number, onPress: any }) {
+    const { id, title, height, bgColor, color, radius, fontSize, onPress } = props;
 
     const styles = StyleSheet.create({
         button: {
-            width: width,
+            width: "100%",
             height: height,
             backgroundColor: bgColor,
             borderRadius: radius,
@@ -62,10 +62,9 @@ export function ThemedButtonNoChildren(props: { id: string, title: any, width: n
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            paddingLeft: 12,
         },
         underlay: {
-            width: width,
+            width: "100%",
             height: height,
             backgroundColor: bgColor,
             borderRadius: radius,
@@ -92,3 +91,49 @@ export function ThemedButtonNoChildren(props: { id: string, title: any, width: n
         </TouchableOpacity>
     );
 }
+
+export function ThemedButtonFixed(props: { id: string, title: any, height: number, bgColor: string, color: string, radius: number, fontSize: number, onPress: any, top: any, left: any, right: any, bottom: any }) {
+    const { id, title, height, bgColor, color, radius, fontSize, onPress, top, right, bottom, left } = props;
+
+    const styles = StyleSheet.create({
+        button: {
+            width: "100%",
+            height: height,
+            backgroundColor: bgColor,
+            borderRadius: radius
+        },
+        underlay: {
+            width: "60%",
+            height: height,
+            backgroundColor: bgColor,
+            borderRadius: radius,
+            margin: "auto",
+            //position: "absolute",
+            top: top,
+            bottom: bottom,
+            left: left,
+            right: right,
+            zIndex: 2
+        },
+        text: {
+            color: color,
+            fontSize: fontSize,
+            padding: 0,
+            fontFamily: "AfacadFlux",
+            margin: "auto"
+        }
+    });
+
+    return (
+        <TouchableOpacity
+            id={id}
+            activeOpacity={0.55}
+            onPress={onPress}
+            style={styles.underlay}>
+            <View style={styles.button}>
+                <Text style={styles.text}>{title}</Text>
+            </View>
+        </TouchableOpacity>
+    );
+}
+
