@@ -9,7 +9,11 @@ export default function HomeScreen() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={'#13D284'} textComponent={"CheckBuddy"} nameIcon={"checklist"} component={""} headerTopPosition={-70}>
+      headerBackgroundColor={'#13D284'}
+      textComponent={"CheckBuddy"}
+      nameIcon={"checklist"}
+      component={""}
+      headerTopPosition={-80}>
       <ThemedButton
           id={"sesmtLists"}
           title={"Check Lists"}

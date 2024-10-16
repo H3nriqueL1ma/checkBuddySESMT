@@ -137,3 +137,52 @@ export function ThemedButtonFixed(props: { id: string, title: any, height: numbe
     );
 }
 
+export function ThemedButtonSpacedIcon(props: { id: string, title: any, titleColorful: { color: string, content: any }, height: number, bgColor: string, color: string, radius: number, fontSize: number, children: any, onPress: any }) {
+    const { id, title, titleColorful, height, bgColor, color, radius, fontSize, children, onPress } = props;
+
+    const styles = StyleSheet.create({
+        button: {
+            width: "100%",
+            height: height,
+            backgroundColor: bgColor,
+            borderRadius: radius,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingLeft: 20,
+            paddingRight: 20,
+        },
+        underlay: {
+            width: "100%",
+            height: height,
+            backgroundColor: bgColor,
+            borderRadius: radius,
+            margin: "auto",
+        },
+        text: {
+            color: color,
+            fontSize: fontSize,
+            padding: 0,
+            fontFamily: "AfacadFlux",
+        }
+    });
+
+    return (
+        <TouchableOpacity
+            id={id}
+            activeOpacity={0.55}
+            onPress={onPress}
+            style={styles.underlay}>
+            <View style={styles.button}>
+                <Text style={styles.text}>
+                    {title} {titleColorful.color == "" || titleColorful.content == "" ? null : (
+                        <Text style={{ color: titleColorful.color }}>{titleColorful.content}</Text>
+                )}
+                </Text>
+                {children}
+            </View>
+        </TouchableOpacity>
+    );
+}
+

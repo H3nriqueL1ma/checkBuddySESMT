@@ -1,18 +1,15 @@
 import {ParallaxScrollView} from "@/components/ParallaxScrollView";
-import {useRouter} from "expo-router";
 import {Image, TouchableOpacity, View} from "react-native";
-import {
-    ThemedButtonFixed,
-    ThemedButtonSpacedIcon
-} from "@/components/ThemedButton";
+import {useRouter} from "expo-router";
+import {ThemedButtonFixed, ThemedButtonSpacedIcon} from "@/components/ThemedButton";
 
-export default function CheckExtintorScreen() {
+export default function CheckExtintorPredialScreen() {
     const router = useRouter();
 
     return (
         <ParallaxScrollView
-            headerBackgroundColor={'#13D284'}
-            textComponent={"Extintores"}
+            headerBackgroundColor={"#13D284"}
+            textComponent={"Extintores Predial"}
             nameIcon={""}
             component={
                 <TouchableOpacity onPress={() => router.back()}>
@@ -23,11 +20,11 @@ export default function CheckExtintorScreen() {
             }
             headerTopPosition={-80}>
             <ThemedButtonSpacedIcon
-                id={"sala-bilheteria"}
-                title={"Sala"}
+                id={"hall-sala-gerencia"}
+                title={"Hall"}
                 titleColorful={{
                     color: "#0FD587",
-                    content: "(Bilheteria)"
+                    content: "(Frente - Sala Gerência)"
                 }}
                 height={85}
                 bgColor={"#2E303F"}
@@ -38,86 +35,41 @@ export default function CheckExtintorScreen() {
                 <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
             </ThemedButtonSpacedIcon>
             <ThemedButtonSpacedIcon
-                id={"corredor-refeitório"}
+                id={"hall-sala-rh"}
+                title={"Hall"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(Frente - Sala RH)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"entrada-portaria"}
+                title={"Entrada"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(Portaria)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"corredor-banco-itau"}
                 title={"Corredor"}
                 titleColorful={{
                     color: "#0FD587",
-                    content: "(Refeitório)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"corredor-tapeçaria-borracharia"}
-                title={"Corredor"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Tapeçaria/Bor.)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"corredor-elétrica"}
-                title={"Corredor"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Elétrica)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"almoxarifado-vug"}
-                title={"Almoxarifado"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Térreo - VUG)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"corredor-almoxarifado"}
-                title={"Corredor"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Almoxarifado)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"almoxarifado-eovg"}
-                title={"Almoxarifado"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(1º Piso - EOVG)"
+                    content: "(Frente - Banco Itaú)"
                 }}
                 height={85}
                 bgColor={"#2E303F"}
@@ -128,11 +80,176 @@ export default function CheckExtintorScreen() {
                 <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
             </ThemedButtonSpacedIcon>
             <ThemedButtonSpacedIcon
-                id={"corredor-secretaria-técnica"}
+                id={"corredor-ambulatorio"}
                 title={"Corredor"}
                 titleColorful={{
                     color: "#0FD587",
-                    content: "(Secretaria Técnica)"
+                    content: "(Ambulatório)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"refeitorio-adm-escada"}
+                title={"Refeitório"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(1º Andar ADM - \nFt. Escada)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"refeitorio-adm-cozinha"}
+                title={"Refeitório"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(1º Andar ADM - Cozinha)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"planejamento"}
+                title={"Planejamento"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(1º Andar)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"glp"}
+                title={"GLP"}
+                titleColorful={{
+                    color: "",
+                    content: ""
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"cabine-gerador"}
+                title={"Cabine Primária/Gerador"}
+                titleColorful={{
+                    color: "",
+                    content: ""
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"caixa-dagua"}
+                title={"Caixa D'água"}
+                titleColorful={{
+                    color: "",
+                    content: ""
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"escada-diretoria"}
+                title={"Escada"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(Acesso Diretoria)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"corredor-presidencia"}
+                title={"Corredor"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(Presidência)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"garagem-presidencia"}
+                title={"Garagem"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(Presidência)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"corredor-adm-support"}
+                title={"Corredor"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(ADM - Support)"
+                }}
+                height={85}
+                bgColor={"#2E303F"}
+                color={"white"}
+                radius={10}
+                fontSize={24}
+                onPress={() => {}}>
+                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
+            </ThemedButtonSpacedIcon>
+            <ThemedButtonSpacedIcon
+                id={"corredor-adm-support-ti"}
+                title={"Corredor"}
+                titleColorful={{
+                    color: "#0FD587",
+                    content: "(ADM - Support T.I.)"
                 }}
                 height={85}
                 bgColor={"#2E303F"}
@@ -143,113 +260,8 @@ export default function CheckExtintorScreen() {
                 <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
             </ThemedButtonSpacedIcon>
             <ThemedButtonSpacedIcon
-                id={"corredor-cambio-diferencial"}
-                title={"Corredor"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Câmbio/Dif.)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"corredor-montagem"}
-                title={"Corredor"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Montagem)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"corredor-valeta-lavagem"}
-                title={"Corredor"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Valeta/Lav. Peça)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"coluna-valeta"}
-                title={"Coluna"}
-                titleColorful={{
-                    color: "#0FD587",
-                    content: "(Valeta 05/06)"
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"reserva"}
-                title={"Reserva"}
-                titleColorful={{
-                    color: "",
-                    content: ""
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"abastecimento"}
-                title={"Abastecimento"}
-                titleColorful={{
-                    color: "",
-                    content: ""
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"pista-descarregamento"}
-                title={"Pista de Descarregamento"}
-                titleColorful={{
-                    color: "",
-                    content: ""
-                }}
-                height={85}
-                bgColor={"#2E303F"}
-                color={"white"}
-                radius={10}
-                fontSize={24}
-                onPress={() => {}}>
-                <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
-            </ThemedButtonSpacedIcon>
-            <ThemedButtonSpacedIcon
-                id={"lavador"}
-                title={"Lavador"}
+                id={"corredor-ambulatorio"}
+                title={"Recebedoria"}
                 titleColorful={{
                     color: "",
                     content: ""

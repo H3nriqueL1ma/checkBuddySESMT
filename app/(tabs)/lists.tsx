@@ -1,4 +1,4 @@
-import {ParallaxScrollViewNoIcon} from "@/components/ParallaxScrollView";
+import {ParallaxScrollView} from "@/components/ParallaxScrollView";
 import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {ThemedButtonNoChildren} from "@/components/ThemedButton";
 import {useRouter} from "expo-router";
@@ -7,7 +7,7 @@ export default function ListsScreen() {
     const router = useRouter();
 
     return (
-        <ParallaxScrollViewNoIcon
+        <ParallaxScrollView
             headerBackgroundColor={'#13D284'}
             textComponent={"SESMT"}
             nameIcon={""}
@@ -18,7 +18,7 @@ export default function ListsScreen() {
                     </View>
                 </TouchableOpacity>
             }
-            headerTopPosition={-60}>
+            headerTopPosition={-80}>
             <ThemedButtonNoChildren
                 id={"extintores"}
                 title={"Extintores"}
@@ -29,14 +29,14 @@ export default function ListsScreen() {
                 fontSize={28}
                 onPress={() => router.push("/checkLists/check_extintor")} />
             <ThemedButtonNoChildren
-                id={"extintores"}
+                id={"extintores-predial"}
                 title={"Extintores Predial"}
                 height={80}
                 bgColor={"#109370"}
                 color={"white"}
                 radius={10}
                 fontSize={28}
-                onPress={() => {}} />
+                onPress={() => router.push("/checkLists/check_extintor_predial")} />
             <ThemedButtonNoChildren
                 id={"hidrantes"}
                 title={"Hidrantes"}
@@ -55,7 +55,7 @@ export default function ListsScreen() {
                 radius={10}
                 fontSize={28}
                 onPress={() => {}} />
-        </ParallaxScrollViewNoIcon>
+        </ParallaxScrollView>
     );
 }
 
