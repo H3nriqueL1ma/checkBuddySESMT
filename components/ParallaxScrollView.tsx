@@ -1,7 +1,8 @@
 import {PropsWithChildren} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated, {
-  FadeIn,
+  BounceInUp,
+  FadeIn, FadeOut,
   interpolate,
   useAnimatedRef,
   useAnimatedStyle,
@@ -131,7 +132,7 @@ export function ParallaxScrollView({
 
   return (
     <ThemedView style={styles.container}>
-      <Animated.ScrollView entering={FadeIn.duration(400)} exiting={FadeIn.duration(400)} ref={scrollRef} scrollEventThrottle={16}>
+      <Animated.ScrollView entering={FadeIn.duration(400)} exiting={FadeOut.duration(400)} ref={scrollRef} scrollEventThrottle={16}>
         <Animated.View
           style={[
             styles.header,

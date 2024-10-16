@@ -45,7 +45,7 @@ export default function ListsScreen() {
                 color={"white"}
                 radius={10}
                 fontSize={28}
-                onPress={() => {}} />
+                onPress={() => router.push("/checkLists/check_hidrante")} />
             <ThemedButtonNoChildren
                 id={"alarmes-incendio"}
                 title={"Alarmes de Incêndio"}
@@ -54,7 +54,7 @@ export default function ListsScreen() {
                 color={"white"}
                 radius={10}
                 fontSize={28}
-                onPress={() => {}} />
+                onPress={() => router.push("/checkLists/check_alarmes")} />
         </ParallaxScrollView>
     );
 }
