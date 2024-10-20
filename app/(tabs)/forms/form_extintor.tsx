@@ -1,7 +1,7 @@
 import {ParallaxScrollView} from "@/components/ParallaxScrollView";
 import {Image, Text, TouchableOpacity, View} from "react-native";
 import {useRouter} from "expo-router";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import RadioField from "@/components/RadioField";
 import TextField from "@/components/TextField";
 import {ThemedButtonFixed} from "@/components/ThemedButton";
@@ -21,6 +21,26 @@ export default function FormExtintorScreen() {
     const [dataProximaRecarga, setDataProximaRecarga] = useState("");
     const [dataTesteHidrostatico, setDataTesteHidrostatico] = useState("");
     const [extintorTipo, setExtintorTipo] = useState("co2");
+
+    function registerData() {
+        console.log(
+          "Número de Fabricação: " + numeroFabricacao +
+            "\nÁrea de Demarcação do Piso: " + demarcacaoPisoChecked +
+            "\nDesobstrução: " + desobstrucaoChecked +
+            "\nIntegridade Estrutura: " + integridadeEstruturaChecked +
+            "\nFixação/Suporte: " + integridadeEstruturaChecked +
+            "\nPressão do Manômetro: " + pressaoManometroChecked +
+            "\nValidade: " + validadeChecked +
+            "\nLote: " + loteTipo +
+            "\nData da Próxima Recarga: " + (dataProximaRecarga === "" ? new Date().toLocaleDateString() : dataProximaRecarga) +
+            "\nData de Teste Hidrostático: " + (dataTesteHidrostatico === "" ? new Date().toLocaleDateString() : dataTesteHidrostatico) +
+            "\nTipo de Extintor: " + extintorTipo
+        );
+    }
+
+    useEffect(() => {
+
+    }, []);
 
     return (
         <ParallaxScrollView
@@ -63,6 +83,12 @@ export default function FormExtintorScreen() {
                     textField={"Integridade Estrutura \n(Mangueira, lacre, \ninstrução de uso, etc.)"}
                     textRadio={["SIM", "NÃO"]}
                     backColor={"#D9D9D9"}/>
+                <TextField
+                    setValue={setPlacaIdentificacao}
+                    textField={"Placa de Identificação"}
+                    backColor={"white"}
+                    placeholder={"Ex: 10"}
+                    type={"identityNumber"}/>
                 <RadioField
                     checked={fixacaoSuporteChecked}
                     setChecked={setFixacaoSuporteChecked}
@@ -119,7 +145,7 @@ export default function FormExtintorScreen() {
                 color={"white"}
                 radius={10}
                 fontSize={28}
-                onPress={() => {}}
+                onPress={() => registerData()}
                 top={"1%"}
                 left={"17%"}
                 right={0}
