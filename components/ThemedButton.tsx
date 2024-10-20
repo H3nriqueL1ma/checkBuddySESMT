@@ -64,7 +64,7 @@ export function ThemedButtonNoChildren(props: { id: string, title: any, height: 
             alignItems: "center",
         },
         underlay: {
-            width: "100%",
+            width: "85%",
             height: height,
             backgroundColor: bgColor,
             borderRadius: radius,
@@ -154,7 +154,7 @@ export function ThemedButtonSpacedIcon(props: { id: string, title: any, titleCol
             paddingRight: 20,
         },
         underlay: {
-            width: "100%",
+            width: "85%",
             height: height,
             backgroundColor: bgColor,
             borderRadius: radius,

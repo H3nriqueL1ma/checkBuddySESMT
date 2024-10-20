@@ -34,7 +34,7 @@ export default function CheckExtintorScreen() {
                 color={"white"}
                 radius={10}
                 fontSize={24}
-                onPress={() => {}}>
+                onPress={() => router.push("/(tabs)/forms/form_extintor")}>
                 <Image style={{ width: 30, height: 30 }} source={require("../../../assets/images/simbolo-unchecked.png")}></Image>
             </ThemedButtonSpacedIcon>
             <ThemedButtonSpacedIcon
@@ -271,8 +271,8 @@ export default function CheckExtintorScreen() {
                 radius={10}
                 fontSize={28}
                 onPress={() => {}}
-                top={"1%"}
-                left={80}
+                top={"0.5%"}
+                left={"17%"}
                 right={0}
                 bottom={0}/>
         </ParallaxScrollView>

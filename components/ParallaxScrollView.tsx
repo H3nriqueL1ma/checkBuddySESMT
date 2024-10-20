@@ -49,7 +49,8 @@ export function ParallaxScrollView({
       },
       content: {
         flex: 1,
-        padding: 32,
+        paddingTop: 20,
+        paddingBottom: 20,
         gap: 16,
         overflow: 'hidden',
         backgroundColor: "white"
